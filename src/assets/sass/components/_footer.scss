@@ -1,0 +1,49 @@
+// Footer SCSS
+
+.footer-section {
+  background: #00497B;;
+  display: flex;
+  align-self: flex-end;
+  // min-height: 61px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding:10px 212px;
+  
+  & a{
+    font-family: 'Noto Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 150%;
+      /* or 30px */
+    
+      letter-spacing: 0.06em;
+    
+      color: #FFFFFF;
+  }
+
+  .social {
+    display: flex;
+
+    @include e(menu) {
+      list-style-type: none;
+    }
+    @include e(links) {
+      text-decoration: none;
+      font-size: 18px;
+      margin-bottom: 1rem;
+      padding: 0 1rem;
+      cursor: pointer;
+      color: $black;
+
+      &:hover {
+        opacity: 0.35;
+      }
+    }
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,34 @@
+.badge{
+  border-radius: 4px;
+  width:min-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding: 2px 4px;
+  gap: 10px;
+
+  @include m(black){
+    background:getColor('black.base');   
+  }
+  @include m(green) {
+    background: $green;
+  }
+  @include m(blue) {
+    background: #4765B0;
+  }
+    @include m(brown) {
+      background: #CB9647;
+    }
+  @include e(os){
+      font-style: normal;
+      font-weight: normal;
+      font-size: getFontSize("caption");
+      color: getColor('white.base');
+  }
+  @include m(light){
+    border: 1px solid getColor("grey.borderGray");
+    color: getColor("warning.base");
+    background-color: $white;
+  }
+}

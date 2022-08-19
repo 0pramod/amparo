@@ -1,0 +1,45 @@
+.top-content{
+    justify-content: space-between;
+    display: flex;
+    // gap:30px;
+    flex-direction: column;
+    width: 100%;
+   
+    
+  @include e(intro-text){
+    display: flex;
+    margin: 30px;
+    align-self: flex-start;
+    font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 145%;
+        text-align: center;
+        letter-spacing: 0.02em;
+    
+        color: #FFFFFF;
+    
+        text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
+  }
+
+  @include e (images){
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    align-items: flex-end;
+    @include e(truck){
+       margin-left: 60px;
+    }
+    @include e(car){
+        margin-right: 116px;
+    }
+
+  }
+  @include e(road){
+    height:40px;
+   
+    background: #6BAB43;
+    border-top: 5px solid #4D4D54;
+    transform: rotate(-0.12deg);
+  }
+}
