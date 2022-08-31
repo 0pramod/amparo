@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // import { Link } from "react-router-dom";
 import {
   cloud,
@@ -7,7 +7,9 @@ import {
   amparoLogo,
   dropdown,
 } from "../../assets/images.js";
+import GetAQuoteForm from "./getAQuoteForm.js";
 const Header = () => {
+  const [formDisplay, setFormDisplay] = useState(false);
   return (
     <>
       <div className="header-container">
@@ -46,7 +48,10 @@ const Header = () => {
                 <a href="# "> Home</a>
               </div>
               <div className="navigation__menu__get-a-quote">
-                <a href=" #"> Get a Quote</a>
+                <a href=" #" onClick={() => setFormDisplay(true)}>
+                  {" "}
+                  Get a Quote
+                </a>
                 <img src={dropdown} className="dropdown_icon" alt=""></img>{" "}
               </div>
               <div className="navigation__menu__about-us">
@@ -61,10 +66,20 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <div className="get-a-quote">
-            <button className="get-a-quote__button"> Get A Quote</button>
-          </div>
         </header>
+        {formDisplay ? (
+          <GetAQuoteForm setFormDisplay={setFormDisplay} />
+        ) : (
+          <div className="get-a-quote">
+            <button
+              className="get-a-quote__button"
+              onClick={() => setFormDisplay(true)}
+            >
+              {" "}
+              Get A Quote
+            </button>
+          </div>
+        )}
       </div>
     </>
   );

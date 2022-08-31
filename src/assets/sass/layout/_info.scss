@@ -1,7 +1,54 @@
 .information-container{
+    display: flex;
     flex-direction: column;
     background: #E9F6FC;
         border: 0.5px solid rgba(0, 73, 123, 0.6);
         align-items: center;
         justify-content: space-between;
+        padding:60px ;
+        @include e(logo){
+            gap:20px;
+            display: flex;
+            flex-direction: row;
+           @include e(text){
+                font-family: 'PT Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 50px;
+                line-height: 150%;
+                letter-spacing: -0.011em;
+                color: #00497B;
+           }
+        }
+        @include e(info){
+            max-width: 1032px;
+            & li{
+                margin-bottom: 30px;
+            }
+            & h4{
+                font-family: 'PT Sans';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 32px;
+                    line-height: 145%;
+                    /* or 46px */
+                
+                    letter-spacing: -0.011em;
+                
+                    color: #F29320;
+            }
+            & p{
+                    padding-left: 60px;
+                    font-family: 'Noto Sans';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 25px;
+                    line-height: 145%;
+                    /* or 36px */
+                
+                    letter-spacing: -0.011em;
+                
+                    color: #00497B;
+            }
+        }
 }

@@ -8,7 +8,10 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding:10px 212px;
+  padding:10px;
+  padding-left:212px;
+  padding-right: 100px;
+  white-space: nowrap;
   
   & a{
     font-family: 'Noto Sans';

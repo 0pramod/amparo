@@ -8,6 +8,7 @@ import { cloud, city, background } from "../../assets/images.js";
 import Footer from "../layout/footer";
 import Contacts from "../layout/contacts";
 import Info from "../layout/Info";
+import GetAQuoteForm from "../layout/getAQuoteForm";
 import TopContent from "../layout/topContent";
 const Home = () => {
   return (
@@ -20,9 +21,10 @@ const Home = () => {
           {/* <img className="city" src={background}></img> */}
         </div>
       </div>
-      {/* <Info/> */}
-      {/* <Contacts /> */}
-      {/* <Footer /> */}
+      <Info />
+      <Contacts />
+      <GetAQuoteForm />
+      <Footer />
     </div>
   );
 };
