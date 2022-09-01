@@ -7,9 +7,12 @@ import {
   amparoLogo,
   dropdown,
 } from "../../assets/images.js";
+import CustomerCenter from "./customerCenter.js";
 import GetAQuoteForm from "./getAQuoteForm.js";
 const Header = () => {
   const [formDisplay, setFormDisplay] = useState(false);
+  const [customerCenterDisplay, setCustomerCenterDisplay] = useState(false);
+  const [getAQuoteButtonDisplay, setGetAQuoteDisplay] = useState(true);
   return (
     <>
       <div className="header-container">
@@ -22,7 +25,7 @@ const Header = () => {
                   src={emailTop}
                   alt=""
                 />
-                <p>info@amparoinsurance.com</p>
+                <a href="# ">info@amparoinsurance.com</a>
               </div>
               <div className="header-top__contents__phone">
                 <img
@@ -30,7 +33,7 @@ const Header = () => {
                   src={phone}
                   alt=""
                 />
-                <p> (866) 746 -1554 </p>
+                <a href="# "> (866) 746 -1554 </a>
               </div>
               <div className="header-top__contents__language">
                 <a href=" "> Portuguese</a>
@@ -45,31 +48,79 @@ const Header = () => {
             </div>
             <div className="navigation__menu">
               <div className="navigation__menu__home">
-                <a href="# "> Home</a>
+                <a
+                  href="# "
+                  onClick={() => {
+                    setFormDisplay(false);
+                    setCustomerCenterDisplay(false);
+                  }}
+                >
+                  {" "}
+                  Home
+                </a>
               </div>
               <div className="navigation__menu__get-a-quote">
-                <a href=" #" onClick={() => setFormDisplay(true)}>
+                <a
+                  href=" #"
+                  onClick={() => {
+                    setFormDisplay(true);
+                    setCustomerCenterDisplay(false);
+                    setGetAQuoteDisplay(false);
+                  }}
+                >
                   {" "}
                   Get a Quote
                 </a>
                 <img src={dropdown} className="dropdown_icon" alt=""></img>{" "}
               </div>
               <div className="navigation__menu__about-us">
-                <a href=" #"> About Us</a>
+                <a
+                  href=" #"
+                  onClick={() => {
+                    setFormDisplay(false);
+                    setCustomerCenterDisplay(false);
+                  }}
+                >
+                  {" "}
+                  About Us
+                </a>
               </div>
               <div className="navigation__menu__insurance">
-                <a href=" #"> Insurance Basics</a>
+                <a
+                  href=" #"
+                  onClick={() => {
+                    setFormDisplay(false);
+                    setCustomerCenterDisplay(false);
+                  }}
+                >
+                  {" "}
+                  Insurance Basics
+                </a>
               </div>
               <div className="navigation__menu__customer-center">
-                <a href=" #"> Customer Center</a>
+                <a
+                  href=" #"
+                  onClick={() => {
+                    setFormDisplay(false);
+                    setCustomerCenterDisplay(true);
+                    setGetAQuoteDisplay(false);
+                  }}
+                >
+                  {" "}
+                  Customer Center
+                </a>
                 <img src={dropdown} className="dropdown_icon" alt=""></img>{" "}
               </div>
             </div>
           </div>
         </header>
-        {formDisplay ? (
-          <GetAQuoteForm setFormDisplay={setFormDisplay} />
+        {formDisplay ? <GetAQuoteForm setFormDisplay={setFormDisplay} /> : ""}
+        {customerCenterDisplay ? (
+          <CustomerCenter setCustomerCenterDisplay={setCustomerCenterDisplay} />
         ) : (
+          ""
+        )}
+        {!formDisplay && !customerCenterDisplay ? (
           <div className="get-a-quote">
             <button
               className="get-a-quote__button"
@@ -79,6 +130,8 @@ const Header = () => {
               Get A Quote
             </button>
           </div>
+        ) : (
+          ""
         )}
       </div>
     </>

@@ -16,12 +16,13 @@ const GetAQuoteForm = ({ setFormDisplay }) => {
               elementum{" "}
             </p>
           </div>
-          <div className="form-container__header__close">
-            <a href="# " onClick={() => setFormDisplay(false)}>
-              {" "}
-              <img src={cross} alt=" #" />
-            </a>
-          </div>
+          <button
+            className="close-button"
+            onClick={() => setFormDisplay(false)}
+          >
+            {" "}
+            <img src={cross} alt=" #" />
+          </button>
         </div>
 
         <form className="get-a-quote-form">

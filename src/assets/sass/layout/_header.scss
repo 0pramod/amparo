@@ -62,12 +62,11 @@ height: 566px;
                 font-weight: 300;
                 font-size: 14px;
                 line-height: 150%;
-                /* identical to box height, or 21px */
-            
                 letter-spacing: -0.011em;
-            // align-items: flex-end;
-            // justify-content: right;
-            
+           
+            & a{
+                    color: #00497B;;
+            }
             @include e(email){
             display: flex;
                 flex-direction: row;
