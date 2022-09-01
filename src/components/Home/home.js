@@ -17,13 +17,10 @@ const Home = () => {
         <div className="top-section">
           <Header />
           <TopContent />
-
-          {/* <img className="city" src={background}></img> */}
         </div>
       </div>
       <Info />
       <Contacts />
-      <GetAQuoteForm />
       <Footer />
     </div>
   );

@@ -1,4 +1,5 @@
 .form-container{
+    
     z-index: 1;
     display: flex;
     flex-direction: column;
@@ -78,10 +79,11 @@
 }
 
 .get-a-quote-form{
+    max-width: fit-content;
     padding: 34px 86px;
     display: grid;
     grid-template-columns: auto auto auto;
-    gap:100px;
+    gap:70px;
     justify-content: space-between;
 label {
         font-family: 'Noto Sans';
@@ -99,7 +101,7 @@ label {
     input{
         box-sizing: border-box;
         
-            width: 376px;
+            width: 350px;
             height: 42px;
             background: #EEEFF3;
             border: 1px solid #767676;
