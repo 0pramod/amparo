@@ -32,7 +32,7 @@
                     font-size: 32px;
                     line-height: 145%;
                     /* or 46px */
-                
+                //    white-space: nowrap;
                     letter-spacing: -0.011em;
                 
                     color: #F29320;
@@ -50,5 +50,32 @@
                 
                     color: #00497B;
             }
+            & a{
+                font-weight: 700;
+                color: #00497B;
+            }
         }
+}
+
+@media (max-width: 500px) {
+  .information-container{
+    @include e(logo){
+        @include e(text){
+            font-size: 36px;
+        }
+        & img{
+            max-width: 240px;
+        }
+    }
+    @include e(info){
+        & h4{
+            font-size: 24px;
+            
+        }
+        & p{
+            font-size: 18px;
+            padding-left: 10px;
+        }
+    }
+  }
 }

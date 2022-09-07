@@ -2,7 +2,7 @@
     background: linear-gradient(180deg, rgba(34, 141, 223, 0.24) -98%, #1A93E7 97.22%);
     display: flex;
     flex-direction: row;
-   
+   align-items: flex-start;
     justify-content: space-between;
     // gap:167px;
     padding: 10px 75px;
@@ -16,7 +16,7 @@
         letter-spacing: 0.06em;
     
         color: #000000;
-    align-items: center;
+    
     & a {
             color: black;
         }
@@ -40,3 +40,20 @@
 
 }
 
+@media (max-width: 500px) {
+   .contact-section{
+    padding: auto;
+    flex-direction: column;
+    gap:20px;
+    
+        font-size: 18px;
+        @include e(email){
+            @include e(icon){
+                padding-right: 10px;
+            }
+           
+        }
+     
+   }
+
+}

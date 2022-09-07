@@ -43,3 +43,17 @@
     transform: rotate(-0.12deg);
   }
 }
+
+@media (max-width:500px){
+  .top-content{
+    @include e(intro-text){
+      font-size: 14px;
+    }
+    @include e(images){
+      display: none;
+    }
+    @include e(road){
+      display: none;
+    }
+  }
+}

@@ -2,6 +2,12 @@ import React, { useState } from "react";
 // import { Link } from "react-router-dom";
 import { cross } from "../../assets/images.js";
 const CustomerCenter = ({ setCustomerCenterDisplay }) => {
+  const [headerForRightContainer, setHeaderForRightContainer] = useState(
+    "Register Your Veichele"
+  );
+  const [contentForRightContainer, setContentForRightContainer] = useState(
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ..."
+  );
   return (
     <>
       {" "}
@@ -27,42 +33,96 @@ const CustomerCenter = ({ setCustomerCenterDisplay }) => {
         <div className="customer-center">
           <div className="customer-center__left-section">
             <div className="customer-center__left-section__contents">
-              <h4>Register Your vehicle</h4>
+              <h4
+                onClick={() => {
+                  setHeaderForRightContainer("Register Your vehicle");
+                  setContentForRightContainer(
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor "
+                  );
+                }}
+              >
+                Register Your vehicle
+              </h4>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor ...
               </p>
             </div>
             <div className="customer-center__left-section__contents">
-              <h4>File a Claim</h4>
+              <h4
+                onClick={() => {
+                  setHeaderForRightContainer("File a Claim");
+                  setContentForRightContainer(
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor "
+                  );
+                }}
+              >
+                File a Claim
+              </h4>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor ...
               </p>
             </div>
             <div className="customer-center__left-section__contents">
-              <h4>Adjust Your Policy</h4>
+              <h4
+                onClick={() => {
+                  setHeaderForRightContainer("Adjust Your Policy");
+                  setContentForRightContainer(
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor "
+                  );
+                }}
+              >
+                Adjust Your Policy
+              </h4>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor ...
               </p>
             </div>
             <div className="customer-center__left-section__contents">
-              <h4>Get Proof of Insurance</h4>
+              <h4
+                onClick={() => {
+                  setHeaderForRightContainer("Get Proof of Insurance");
+                  setContentForRightContainer(
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor "
+                  );
+                }}
+              >
+                Get Proof of Insurance
+              </h4>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor ...
               </p>
             </div>
             <div className="customer-center__left-section__contents">
-              <h4>Make a Payment</h4>
+              <h4
+                onClick={() => {
+                  setHeaderForRightContainer("Make a Payment");
+                  setContentForRightContainer(
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor "
+                  );
+                }}
+              >
+                Make a Payment
+              </h4>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor ...
               </p>
             </div>
             <div className="customer-center__left-section__contents">
-              <h4>How can we help you?</h4>
+              <h4
+                onClick={() => {
+                  setHeaderForRightContainer("How can we help you?");
+                  setContentForRightContainer(
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor "
+                  );
+                }}
+              >
+                How can we help you?
+              </h4>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor ...
@@ -70,13 +130,8 @@ const CustomerCenter = ({ setCustomerCenterDisplay }) => {
             </div>
           </div>
           <div className="customer-center__right-section">
-            <h4> Adjust Your Policy</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor. Consectetur adipiscing elit, sed do eiusmod Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor. Consectetur adipiscing elit, sed do eiusmod
-            </p>
+            <h4> {headerForRightContainer}</h4>
+            <p>{contentForRightContainer}</p>
           </div>
         </div>
       </div>

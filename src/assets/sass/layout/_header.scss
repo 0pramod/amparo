@@ -90,7 +90,7 @@ height: 566px;
                 gap:10px;
                 
                 
-                justify-content: space-between;
+                 justify-content: space-between;
                 & a{
                     color: #5D5757;
                     &:hover {
@@ -150,18 +150,7 @@ height: 566px;
                     color: #F18400;
                     font-weight: 700;
                 }
-                &::after{
-                    // bottom: 0;
-                    //     left: 0;
-                    //     right: 0;
-                    //     margin: auto;
-                    //     width: 0%;
-                    //     content: '.';
-                    //     color: transparent;
-                    //     background: #aaa;
-                    //     height: 1px;
-                }
-
+                
 
       } 
     }
@@ -173,7 +162,7 @@ height: 566px;
     justify-content: space-between;
     // align-self: flex-start;
     align-items: center;
-    margin-top: 24px;
+    // margin-top: 24px;
     @include e(button){
         cursor: pointer;
         box-sizing: border-box;
@@ -184,8 +173,10 @@ height: 566px;
                 line-height: 33px;
             
                 color: #FFFFFF;
-            width: 183.7px;
-            height: 55px;
+                padding: 10px 20px;
+            // width: 183.7px;
+            // height: 55px;
+
         
             background: linear-gradient(180deg, #F18A0C 0%, rgba(232, 171, 97, 0.99) 55.73%, rgba(241, 138, 12, 0.9) 100%);
             border: 1px solid #F29320;
@@ -197,19 +188,28 @@ height: 566px;
 
 
 
-// .dropdown-icon{
-//     align-self: center;
-//     justify-content: center;
-//     align-items: center;
-//     margin-top: 50%;
-// }
-
 @media (max-width: 1440px) {
     .wrapper{
         background-size: 100% 500px;
     }
     .header-container {
+       
         max-height: 400px;
     }
 
+}
+@media (max-width: 500px) {
+
+.header-container{
+    background-image: none;
+    height: auto;
+}
+.get-a-quote{
+    @include e(button){
+        font-size: 12px;
+        line-height: 16px;
+        padding: 5px 10px;
+    }
+}
+    
 }
