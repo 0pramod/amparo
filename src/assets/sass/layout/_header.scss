@@ -1,5 +1,4 @@
-.wrapper{
-    
+.wrapper{   
     background-image: url('../images/city.png');
     background-repeat: no-repeat;
     background-size: 100% 600px;
@@ -130,6 +129,11 @@ height: 566px;
             
         margin-top: 40px;
        @include e(get-a-quote){
+          & :hover{
+            border-bottom: 3px solid #F18400;
+            
+            
+          }
             @include dropdown;
        }
        @include e(customer-center){
@@ -141,15 +145,17 @@ height: 566px;
                 &:hover {
                 // text-decoration: underline;
                 //     text-decoration-color: #F18400;
-                    color: #F18400
-                }
-                &:hover::after{
-                    width: 100%;
-                }
-                &:active {
                     color: #F18400;
-                    font-weight: 700;
+                    padding-bottom: 10px;
+                    border-bottom: 3px solid #F18400;
                 }
+                // &:hover::after{
+                //     width: 100%;
+                // }
+                // &:active {
+                //     color: #F18400;
+                //     font-weight: 700;
+                // }
                 
 
       } 
@@ -186,6 +192,63 @@ height: 566px;
     }
 }
 
+// css for header anb navigation menu for mobile view
+
+.navigation-pop-up{
+    position: fixed;
+    width:100%;
+    height: 100vh;
+}
+.header-for-mobile-view{
+    height:10.5vh;
+    // position: fixed;
+    // width:100%;
+    // margin: auto;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px 0px;
+    
+  
+}
+.hamburger-menu, .amparo-logo-small{
+    margin-bottom: 12px;
+}
+.car-and-truck{
+    align-self: flex-end;
+   
+}
+
+.navigation-menu-mobile{
+    z-index: 5;
+    // border-top: 0.5px solid rgba(0, 73, 123, 0.6);
+    position: fixed;
+    scroll-behavior: none;
+    transition: 3s;
+    width:100%;
+    height: 100%;
+    scroll-behavior: none;
+    // height: 90vh;
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    background-color:#fff;
+    z-index: 3;
+    @include e(menu){
+        cursor: pointer;
+       margin: 20px;
+       padding-bottom: 20px;
+       border-bottom: 0.5px solid gray;
+       
+       & :hover{
+        cursor: pointer;
+        color: #F29320;
+       }
+
+    }
+}
 
 
 @media (max-width: 1440px) {
@@ -198,18 +261,39 @@ height: 566px;
     }
 
 }
+@media (min-width:700px){
+    .header-for-mobile-view{
+        display: none;
+    }
+}
 @media (max-width: 500px) {
+.wrapper{
+background-image: url('../images/city2.png');
+   
+    background-size: 100% auto;
+    background-position: bottom;
+}
 
 .header-container{
     background-image: none;
     height: auto;
 }
 .get-a-quote{
+    margin-top: 18px;
     @include e(button){
         font-size: 12px;
         line-height: 16px;
         padding: 5px 10px;
     }
 }
+.header{
+    display: none;
+}
     
 }
+
+// .active-menu{
+//              color: #F18400;
+//             font-weight: 700;
+            
+// }

@@ -1,7 +1,5 @@
-import React from "react";
-// import LeftContainer from "./leftContainer";
-// import MainContainer from "./mainContainer";
-// import RightContainer from "./rightContainer";
+import React, { useState } from "react";
+
 import Header from "../layout/header";
 // import { Link } from "react-router-dom";
 import { cloud, city, background } from "../../assets/images.js";
@@ -12,14 +10,16 @@ import GetAQuoteForm from "../layout/getAQuoteForm";
 import TopContent from "../layout/topContent";
 import CustomerCenter from "../layout/customerCenter";
 const Home = () => {
+  const [displayInfoContainer, setDisplayInfoContainer] = useState(true);
   return (
     <div className="homepage">
       <div className="wrapper">
         <div className="top-section">
-          <Header />
+          <Header setDisplayInfoContainer={setDisplayInfoContainer} />
           <TopContent />
         </div>
       </div>
+
       <Info />
       <Contacts />
       {/* <CustomerCenter /> */}

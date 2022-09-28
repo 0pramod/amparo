@@ -9,7 +9,7 @@
   @include e(intro-text){
     display: flex;
     margin: 30px;
-    align-self: flex-start;
+    // align-self: flex-start;
     font-style: normal;
         font-weight: 700;
         font-size: 32px;
@@ -47,6 +47,7 @@
 @media (max-width:500px){
   .top-content{
     @include e(intro-text){
+      margin:30px 52px;
       font-size: 14px;
     }
     @include e(images){

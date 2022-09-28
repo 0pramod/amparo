@@ -9,13 +9,20 @@ import {
 } from "../../assets/images.js";
 import CustomerCenter from "./customerCenter.js";
 import GetAQuoteForm from "./getAQuoteForm.js";
-const Header = () => {
+import HeaderForMobileView from "./headerForMobileView.js";
+const Header = ({ setDisplayInfoContainer }) => {
   const [formDisplay, setFormDisplay] = useState(false);
   const [customerCenterDisplay, setCustomerCenterDisplay] = useState(false);
   const [getAQuoteButtonDisplay, setGetAQuoteDisplay] = useState(true);
+
   return (
     <>
       <div className="header-container">
+        <HeaderForMobileView
+          setFormDisplay={setFormDisplay}
+          setCustomerCenterDisplay={setCustomerCenterDisplay}
+          setDisplayInfoContainer={setDisplayInfoContainer}
+        />
         <header className="header">
           <div className="header-top">
             <div className="header-top__contents">
@@ -47,7 +54,7 @@ const Header = () => {
               <img src={amparoLogo} alt=" "></img>
             </div>
             <div className="navigation__menu">
-              <div className="navigation__menu__home">
+              <div className="navigation__menu__home active-menu">
                 <a
                   href="# "
                   onClick={() => {
@@ -59,7 +66,7 @@ const Header = () => {
                   Home
                 </a>
               </div>
-              <div className="navigation__menu__get-a-quote">
+              <div className="navigation__menu__get-a-quote ">
                 <a
                   href=" #"
                   onClick={() => {
@@ -73,7 +80,7 @@ const Header = () => {
                 </a>
                 <img src={dropdown} className="dropdown_icon" alt=""></img>{" "}
               </div>
-              <div className="navigation__menu__about-us">
+              <div className="navigation__menu__about-us  nav">
                 <a
                   href=" #"
                   onClick={() => {
@@ -85,7 +92,7 @@ const Header = () => {
                   About Us
                 </a>
               </div>
-              <div className="navigation__menu__insurance">
+              <div className="navigation__menu__insurance  nav">
                 <a
                   href=" #"
                   onClick={() => {
@@ -97,7 +104,7 @@ const Header = () => {
                   Insurance Basics
                 </a>
               </div>
-              <div className="navigation__menu__customer-center">
+              <div className="navigation__menu__customer-center nav">
                 <a
                   href=" #"
                   onClick={() => {
@@ -114,6 +121,7 @@ const Header = () => {
             </div>
           </div>
         </header>
+
         {formDisplay ? <GetAQuoteForm setFormDisplay={setFormDisplay} /> : ""}
         {customerCenterDisplay ? (
           <CustomerCenter setCustomerCenterDisplay={setCustomerCenterDisplay} />

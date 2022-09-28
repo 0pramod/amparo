@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    justify-content: space-between;
     height: fit-content;
     background: #FFFFFF;
     border-top: 0.5px solid #767676;
@@ -26,12 +27,11 @@
                     color: #767676;
             }
             & p{
-                   font-family: 'Noto Sans';
+                font-family: 'Noto Sans';
                     font-style: normal;
                     font-weight: 300;
                     font-size: 20px;
                     line-height: 150%;
-                    /* identical to box height, or 30px */
                 
                     letter-spacing: -0.011em;
                 
@@ -85,10 +85,10 @@
     grid-template-columns: auto auto auto;
     gap:70px;
     justify-content: space-between;
-label {
+   label {
         font-family: 'Noto Sans';
         font-style: normal;
-        font-weight: 5500;
+        font-weight: 300;
         font-size: 18px;
         line-height: 150%;
         /* or 27px */
@@ -100,7 +100,6 @@ label {
     }
     input{
         box-sizing: border-box;
-        
             width: 350px;
             height: 42px;
             background: #EEEFF3;
@@ -111,4 +110,57 @@ label {
 
 .required-icon{
     margin-left: 5px;
+}
+
+@media (max-width: 500px) {
+    .close-button {
+           display:none;
+    
+        }
+    .form-container{
+        z-index: 6;
+        // height: 72vh;
+        // max-width: 500px;
+        overflow:hidden;
+        background: #E9F6FC;
+            // border: 0.5px solid rgba(0, 73, 123, 0.6);
+          
+
+            @include e(header) {
+                    padding: 30px;
+            
+                    @include e(text) {
+                        & h4 {
+                            font-size: 36px;
+                            line-height: 125%;
+                            letter-spacing: 0.05em;
+            
+                        color: #F18400;
+                        }       
+                      }
+            }
+            @include e(buttons) {
+
+                align-self: center;
+                padding: 40px;
+
+                @include e(no-thanks) {
+                    display: none;
+                }
+            }
+    }
+
+        .get-a-quote-form {
+            max-width: fit-content;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            justify-content: space-between;
+    
+    
+           
+        }
+    
+        
 }

@@ -7,7 +7,7 @@ const Info = () => {
       <div className="information-container">
         <div className="information-container__logo">
           <p className="information-container__logo__text"> Why</p>
-          <img src={amparoLogoBig}></img>
+          <img src={amparoLogoBig} alt="# "></img>
         </div>
         <div className="information-container__info">
           <ul>

@@ -83,7 +83,35 @@
 }
 
 .close-button{
+    cursor: pointer;
     background: none;
     border: none;
   
+}
+
+@media (max-width: 500px) {
+  
+    .customer-center {
+
+        display: flex;
+            flex-direction: row;
+            margin: 30px;
+
+            @include e(right-section){
+                display: none;
+            }
+        
+            @include e(left-section) {
+                gap:40px;
+                display:flex;
+                flex-direction: column;
+                margin: 0px;
+                padding: 0px;
+        
+                
+        
+            }
+
+    }
+
 }

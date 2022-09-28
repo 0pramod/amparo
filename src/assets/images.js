@@ -9,19 +9,25 @@ import dropdown from "./images/dropdown.svg";
 import amparoLogo from "./images/amparo-logo-1.png";
 import cloud from "./images/cloud.png";
 import city from "./images/city.png";
+import city2 from "./images/city2.png";
 import background from "./images/background.png";
 import allCloud from "./images/allCloud.png";
 import car from "./images/car.png";
 import truck from "./images/truck.png";
+import carAndTruck from "./images/car-and-truck.png";
 import signBoard from "./images/signBoard.png";
 import amparoBoard from "./images/amparo-board.png";
 import amparoLogoBig from "./images/amparo-logo-big.png";
+import amparoLogoSmall from "./images/amparo-logo-small.png";
+import hamburger from "./images/hamburger.svg";
 
 export {
+  hamburger,
   asterisk,
   cross,
   emailTop,
   amparoLogoBig,
+  amparoLogoSmall,
   emailBlack,
   phoneBlack,
   whatsapp,
@@ -31,9 +37,11 @@ export {
   cloud,
   allCloud,
   city,
+  city2,
   background,
   car,
   truck,
+  carAndTruck,
   signBoard,
   amparoBoard,
 };

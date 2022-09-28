@@ -42,10 +42,14 @@
 
 @media (max-width: 500px) {
    .contact-section{
+    height:17vh;
     padding: auto;
     flex-direction: column;
     gap:20px;
-    
+      & img{
+        max-width: 40px;
+        // max-height: 25px;
+      }
         font-size: 18px;
         @include e(email){
             @include e(icon){

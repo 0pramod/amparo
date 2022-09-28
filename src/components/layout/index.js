@@ -5,6 +5,7 @@ import Info from "./Info";
 import TopContent from "./topContent";
 import GetAQuoteForm from "./getAQuoteForm";
 import CustomerCenter from "./customerCenter";
+import HeaderForMobileView from "./headerForMobileView";
 
 export default {
   Header,
@@ -14,4 +15,5 @@ export default {
   TopContent,
   GetAQuoteForm,
   CustomerCenter,
+  HeaderForMobileView,
 };

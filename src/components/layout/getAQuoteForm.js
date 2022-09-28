@@ -42,7 +42,13 @@ const GetAQuoteForm = ({ setFormDisplay }) => {
               Phone <img src={asterisk} className="required-icon"></img>
             </label>
             <br></br>
-            <input type="number" id="phone" name="phone" value="" />
+            <input
+              type="number"
+              id="phone"
+              name="phone"
+              placeholder="xxxxxxxxxxx"
+              value=""
+            />
           </div>
           <div>
             <label for="state">
