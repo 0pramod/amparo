@@ -61,12 +61,25 @@ const HeaderForMobileView = ({
               </div>
             </header>
             <div className="navigation-menu-mobile">
-              <div className="navigation-menu-mobile__menu"> Home</div>
+              <div
+                className="navigation-menu-mobile__menu"
+                onClick={() => {
+                  setFormDisplay(false);
+                  setDisplayNavigation(false);
+                  setCustomerCenterDisplay(false);
+                  setDisplayInfoContainer(false);
+                  setDisplayHeader(true);
+                }}
+              >
+                {" "}
+                Home
+              </div>
               <div
                 className="navigation-menu-mobile__menu"
                 onClick={() => {
                   setFormDisplay(true);
                   setDisplayNavigation(false);
+                  setCustomerCenterDisplay(false);
                   setDisplayInfoContainer(false);
                   setDisplayHeader(true);
                 }}
@@ -81,6 +94,7 @@ const HeaderForMobileView = ({
               <div
                 className="navigation-menu-mobile__menu"
                 onClick={() => {
+                  setFormDisplay(false);
                   setCustomerCenterDisplay(true);
                   setDisplayNavigation(false);
                   setDisplayInfoContainer(false);

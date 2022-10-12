@@ -1,3 +1,5 @@
+import file from "./videos/file.mp4";
+import board from "./images/board.jpg";
 import emailTop from "./images/emailTop.svg";
 import emailBlack from "./images/emailBlack.png";
 import phone from "./images/phone.svg";
@@ -22,6 +24,8 @@ import amparoLogoSmall from "./images/amparo-logo-small.png";
 import hamburger from "./images/hamburger.svg";
 
 export {
+  board,
+  file,
   hamburger,
   asterisk,
   cross,
