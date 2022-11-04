@@ -150,7 +150,8 @@
       }
     }
   }
-  @include m(active) {
+  @include m(dropdown-active) {
+    // navigation--dropdown-active
     a {
       color: #f18400;
       &::before {
@@ -171,6 +172,28 @@
         bottom: -60px;
         left: 50%;
         transform: translateX(-50%);
+      }
+    }
+  }
+  @include m(active) {
+    //  navigation--active
+    a {
+      color: #f18400;
+      &::before {
+        content: "";
+        height: 2px;
+        background: #f18400;
+        display: block;
+        width: 40px;
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    svg {
+      path {
+        fill: #f18400;
       }
     }
   }
