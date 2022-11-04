@@ -1,10 +1,13 @@
-.contact-section{
+.contacts{
     background: linear-gradient(180deg, rgba(34, 141, 223, 0.24) -98%, #1A93E7 97.22%);
+}
+.contact-section{
+    // background: linear-gradient(180deg, rgba(34, 141, 223, 0.24) -98%, #1A93E7 97.22%);
     display: flex;
     flex-direction: row;
-   align-items: flex-start;
     justify-content: space-between;
     // gap:167px;
+    // width:100%;
     padding: 10px 75px;
     white-space: nowrap;
     font-style: normal;
@@ -40,17 +43,25 @@
 
 }
 
-@media (max-width: 500px) {
+@media (max-width: 900px) {
+    .contacts{
+        // padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
    .contact-section{
     // min-height:17vh;
-    padding: auto;
+    // padding: 0px;
+    // align-items: center;
+    justify-content: space-between;
     flex-direction: column;
     gap:20px;
+    font-size: 18px;
       & img{
         max-width: 40px;
         // max-height: 25px;
       }
-        font-size: 18px;
         @include e(email){
             @include e(icon){
                 padding-right: 10px;
@@ -60,4 +71,18 @@
      
    }
 
+}
+
+@media (max-width:1200px) {
+    .contact-section{
+        font-size: 20px;
+        padding: 10px 20px;
+    }
+
+}
+
+@media (max-width:450px){
+    .contact-section{
+        font-size: 15px;
+    }
 }

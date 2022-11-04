@@ -1,0 +1,146 @@
+.thumbs {
+    // max-width: fit-content
+    display: flex;
+    align-self: center;
+    align-items: center;
+    align-content: center;
+    background-color: #6B5A13;
+    padding: 10px 100px;
+    width: 100%;
+
+    justify-content: space-between;
+}
+.carousel-container{
+    // background-color: #6B5A13;
+    display: flex;
+    flex-direction: column;
+    // padding: 20px;
+}
+
+.thumbnail{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    background: #6B5A13;
+
+}
+
+.thumb{
+    padding: 10px;
+       display: flex;
+    flex-direction: row;
+    gap:10px;
+    background: #614F03;
+        border-radius: 5px;
+        // transform: matrix(1, 0, 0, -1, 0, 0);
+    @include e(image){
+        max-width: 100px;
+        height:80px;
+    }
+    @include e(details){
+        align-self: flex-end;
+        font-family: 'Noto Sans';
+            font-style: normal;
+            line-height: 150%;
+                letter-spacing: -0.011em;
+                color: #FFFFFF;
+        @include e(name){
+           
+                font-weight: 600;
+                font-size: 16px;
+                
+        }
+        @include e(description){
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 150%;
+        }
+    }
+
+
+}
+.carousel {
+    align-items: center;
+    z-index: 0;
+    // display: flex;
+    // background-color: aqua;
+    // flex-direction: row;
+    // padding-top: 10px;
+    // padding-bottom: 10px;
+    // padding-left:15%;
+    // padding: 10px 20%;
+
+    gap: 100px;
+
+
+}
+
+.video-active{
+    background:#0A0A0A;
+   
+}
+.video-inactive{
+    background: rgba(58, 60, 64, 0.77);
+    opacity:0.5;
+
+}
+
+.btn-prev {
+    width: 40.72px;
+        height: 48.5px;
+    z-index: 1;
+    position: absolute;
+    margin-top: 10%;
+    left: 2%;
+    opacity: 0.6;
+    background: rgba(17, 16, 16, 0.6);
+        
+
+}
+
+.btn-next {
+    width: 40.72px;
+        height: 48.5px;
+    z-index: 1;
+    position: absolute;
+    margin-top: 10%;
+    right: 2%;
+    background: rgba(17, 16, 16, 0.6);
+       
+
+}
+
+.test {
+    // display: flex;
+    // flex-direction: row;
+    // gap:200px;
+}
+
+.testing {
+    width: 100px;
+    height: 100px;
+    background-color: chartreuse;
+    border: 1px solid black;
+    margin: 200px;
+    align-items: center;
+    overflow: hidden;
+}
+
+@media (max-width: 720px) {
+    .thumbnail{
+        display: none;
+    }
+    .video-inactive{
+        opacity: 1;
+    }
+    
+
+}
+@media (max-width: 1400px) {
+  .thumb{
+    flex-direction: column;
+    align-items: center;
+   
+  }
+}

@@ -22,8 +22,20 @@ import amparoBoard from "./images/amparo-board.png";
 import amparoLogoBig from "./images/amparo-logo-big.png";
 import amparoLogoSmall from "./images/amparo-logo-small.png";
 import hamburger from "./images/hamburger.svg";
+import abstract01 from "./images/abstract01.jpg";
+import abstract02 from "./images/abstract02.jpg";
+import abstract03 from "./images/abstract03.jpg";
+import abstract04 from "./images/abstract04.jpg";
+import arrowLeft from "./images/arrow-left.svg";
+import arrowRight from "./images/arrow-right.svg";
 
 export {
+  arrowLeft,
+  arrowRight,
+  abstract01,
+  abstract02,
+  abstract03,
+  abstract04,
   board,
   file,
   hamburger,

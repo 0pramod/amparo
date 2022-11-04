@@ -10,6 +10,7 @@ import GetAQuoteForm from "../layout/getAQuoteForm";
 import TopContent from "../layout/topContent";
 import CustomerCenter from "../layout/customerCenter";
 import Carousel from "../layout/carousel";
+import Carousel2 from "../layout/carousel2";
 const Home = () => {
   const [displayInfoContainer, setDisplayInfoContainer] = useState(true);
   return (
@@ -20,6 +21,7 @@ const Home = () => {
           <TopContent />
         </div>
       </div>
+      {/* <Carousel2 /> */}
       <Carousel />
       <Info />
       <Contacts />

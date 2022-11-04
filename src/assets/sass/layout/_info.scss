@@ -10,6 +10,7 @@
             gap:20px;
             display: flex;
             flex-direction: row;
+            margin-bottom: 20px;
           
            @include e(text){
                 font-family: 'PT Sans';
@@ -56,14 +57,24 @@
                 color: #00497B;
             }
         }
-}
+}  
 
+@media (max-width:720px){
+    .information-container {
+            @include e(logo) {
+    
+                & img {
+                    max-width: 300px;
+                }
+            }
+        }
+
+}
 @media (max-width: 500px) {
   .information-container{
     padding: 40px;
     @include e(logo){
-        margin-bottom: 20px;
-
+      
         @include e(text){
             font-size: 36px;
         
@@ -84,4 +95,36 @@
         }
     }
   }
+}
+
+@media (max-width: 350px) {
+
+    .information-container {
+            padding: 40px;
+    
+            @include e(logo) {
+                gap: 10px;
+                @include e(text) {
+                    font-size: 30px;
+    
+                }
+    
+                & img {
+                    max-width: 150px;
+                }
+            }
+                         @include e(info) {
+                             padding: auto;
+            
+                             & h4 {
+                                 font-size: 20px;
+            
+                             }
+            
+                             & p {
+                                 font-size: 15px;
+                                 padding-left: 8px;
+                             }
+                         }
+}
 }

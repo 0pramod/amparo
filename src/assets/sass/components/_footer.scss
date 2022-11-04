@@ -28,11 +28,16 @@
 
 }
 
-@media (max-width: 500px) {
+@media (max-width:1024px){
+  .footer-section{
+    padding: 20px 50px;
+  }
+}
+@media (max-width: 720px) {
   .footer-section{
     height:6.5vh;
     padding: 20px 20px;
-    gap:20px;
+    // gap:20px;
     & a{
           font-size: 12px;
 
@@ -40,4 +45,14 @@
     
   }
 
+}
+
+@media (max-width:350px) {
+  .footer-section {
+    padding: 20px 10px;
+      & a {
+        font-size: 10px;
+    
+      }
+  }
 }
