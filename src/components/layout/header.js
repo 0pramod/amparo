@@ -54,7 +54,7 @@ const Header = ({ setDisplayInfoContainer }) => {
               <img src={amparoLogo} alt=" "></img>
             </div>
             <div className="navigation__menu">
-              <div className="navigation__menu__home active-menu">
+              <div className="navigation__menu-link active-menu">
                 <a
                   href="# "
                   onClick={() => {
@@ -66,7 +66,7 @@ const Header = ({ setDisplayInfoContainer }) => {
                   Home
                 </a>
               </div>
-              <div className="navigation__menu__get-a-quote ">
+              <div className="navigation__menu-link ">
                 <a
                   href=" #"
                   onClick={() => {
@@ -80,7 +80,7 @@ const Header = ({ setDisplayInfoContainer }) => {
                 </a>
                 <img src={dropdown} className="dropdown_icon" alt=""></img>{" "}
               </div>
-              <div className="navigation__menu__about-us  nav">
+              <div className="navigation__menu-link  nav">
                 <a
                   href=" #"
                   onClick={() => {
@@ -92,7 +92,7 @@ const Header = ({ setDisplayInfoContainer }) => {
                   About Us
                 </a>
               </div>
-              <div className="navigation__menu__insurance  nav">
+              <div className="navigation__menu-link  nav">
                 <a
                   href=" #"
                   onClick={() => {
@@ -104,7 +104,7 @@ const Header = ({ setDisplayInfoContainer }) => {
                   Insurance Basics
                 </a>
               </div>
-              <div className="navigation__menu__customer-center nav">
+              <div className="navigation__menu-link nav">
                 <a
                   href=" #"
                   onClick={() => {

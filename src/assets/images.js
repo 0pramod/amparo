@@ -22,6 +22,7 @@ import amparoBoard from "./images/amparo-board.png";
 import amparoLogoBig from "./images/amparo-logo-big.png";
 import amparoLogoSmall from "./images/amparo-logo-small.png";
 import hamburger from "./images/hamburger.svg";
+import Uparrow from "./images/up-arrow.svg";
 
 export {
   board,
@@ -48,4 +49,5 @@ export {
   carAndTruck,
   signBoard,
   amparoBoard,
+  Uparrow,
 };
